@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+body{
+  background-color: rgba(255, 234, 0,.7);
+
+}
+.success{
+  color: green;
+  font-size: 1.5em;
+}
+
+.alert{
+  color: red;
+  font-size: 1.5em;
+}

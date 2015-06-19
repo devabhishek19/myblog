@@ -1,0 +1,19 @@
+<h1>Create a new Post</h1>
+
+  <%= form_for @post do |f|%>
+    <p>
+      <%= f.label :title%>
+      <%= f.text_field :title%>
+    </p>
+    <p>
+      <%= f.label :post%>
+      <%= f.text_area :post%>
+    </p>
+    <p>
+      <%= f.submit%>
+    </p>
+  <%end%>
+
+<div id="back_to_home">
+  <%=link_to "Back to Home", posts_path%>
+</div>
