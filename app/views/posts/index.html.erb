@@ -1,0 +1,12 @@
+<h1>Main Titles :</h1>
+<div class="container_posts">
+  <ul>
+    <% @posts.each do |post| %>
+      <li>
+        <p>
+          <%=link_to post.title, post_path(post)%>
+        </p>
+      </li>
+    <%end%>
+  </ul>
+</div>

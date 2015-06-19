@@ -1,0 +1,19 @@
+.container_post_detail{
+  margin-top: 100px;
+  margin-left: 150px; 
+}
+
+.post_detail tr:nth-child(1){
+  text-align: center;
+}
+.post_detail td{
+  border: 1px solid black;
+  line-height: 30px;
+  padding: 10px;
+}
+.post_detail tr td:nth-child(2){
+  width: 500px;
+}
+#back_to_home{
+  font-size: 2em;
+}
