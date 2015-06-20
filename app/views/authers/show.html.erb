@@ -1,0 +1,28 @@
+
+<div class="container">
+    <h1>Detail view</h1>
+    <p>
+      First Name : <%=@auther.fname%>
+    </p>
+    <p>
+      Last Name : <%=@auther.lname%>
+    </p>
+    <p>
+      Created On : <%=@auther.created_at.to_time%>
+    </p>
+    <p>
+      <ul>
+        <%@auther_post.each do |post|%>
+          <li>
+            <%=post.title%> : <%=post.post%>
+          </li>
+        <%end%>
+      </ul>
+    </p>
+    <div>
+      <%=link_to "Edit", edit_auther_path(params[:id])%> | 
+      <%=link_to "Delete", auther_path(params[:id]), method: :delete, data:{confirm:"Are you sure you want to delete the Auther"}%>
+    </div><br><br>
+    <%=link_to "Back to Home", authers_path%>
+
+</div>

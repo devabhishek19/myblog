@@ -1,20 +1,29 @@
-<h1>Detail of <%=@post.title%> :</h1>
-<div class="container_post_detail">
-  <table class="post_detail">
-    <tr>
-      <td>Title</td>
-      <td>Post</td>
-      <td>Created On </td>
-      <td>Updated On</td>
-    </tr>
-    <tr>
-      <td><%=@post.title%></td>
-      <td><%=@post.post%></td>
-      <td><%=@post.created_at.to_date%></td>
-      <td><%=@post.updated_at.to_date%></td>
-    </tr>
-  </table>
-</div><br>
-<div id="back_to_home">
-  <%=link_to "Back to Home", posts_path%>
+<div class="container">
+  <h1>Detail of <%=@post.title%></h1>
+  <div class="container_post_detail">
+    <table class="post_detail">
+      <tr>
+        <td>Title</td>
+        <td>Post</td>
+        <td>Created On </td>
+        <td>Updated On</td>
+        <td>Auther Id</td>
+      </tr>
+      <tr>
+        <td><%=@post.title%></td>
+        <td><%=@post.post%></td>
+        <td><%=@post.created_at.to_date%></td>
+        <td><%=@post.updated_at.to_date%></td>
+        <td><%=@post.auther_id%></td>
+      </tr>
+    </table>
+  </div><br>
+
+  <P>
+    <%=link_to "Edit", edit_post_path(params[:id])%> | 
+    <%=link_to "Delete", post_path(params[:id]), method: :delete, data:{confirm:"Are you sure you want to delete this Post?"}%>
+  </P>
+  <div id="back_to_home">
+    <%=link_to "Back to Home", posts_path%>
+  </div>
 </div>

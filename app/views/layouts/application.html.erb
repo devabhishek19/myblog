@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar">
+    <ul class="nav">
+      <li>
+        <a href="<%=posts_path%>">Home</a>
+        </li><li>
+        <a href="<%=authers_path%>">Authers</a>
+        </li><li>
+        <a href="#">Contact Me</a>
+      </li>
+    </ul>
+  </nav>
   <div class="sub-body">
   <p class="success">
     <%= flash[:success] if flash[:success]%>
@@ -17,5 +28,10 @@
 
 <%= yield %>
   </div>
+  <footer class="footer">
+    <div>
+      Copyright @ 2015 web design by Ak & Co.
+    </div>
+  </footer>
 </body>
 </html>

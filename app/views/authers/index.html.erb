@@ -1,0 +1,14 @@
+
+
+<div class="container">
+  <h1>List of all Authers</h1>
+  <ul>
+    <%@authers.each do |auther|%>
+    <li>
+      <%=link_to auther.fname, auther_path(auther)%> <%=auther.lname%><br><br>
+    </li>
+    <%end%>
+  </ul>
+  <%=button_to "create a new Auther", new_auther_path, method: :get%>
+</div>
+

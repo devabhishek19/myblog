@@ -1,6 +1,6 @@
-<h1>Main Titles :</h1>
-<div class="container_posts">
-  
+
+<div class="container">
+  <h1>Post Titles</h1>
   <ul>
     <% @posts.each do |post| %>
       <li>
@@ -12,6 +12,8 @@
     <%end%>
   </ul><br><br>
   <p class="link_to_new">
-    <%= link_to "Create a new Post", new_post_path%>
+    <%= button_to "Create a new Post", new_post_path, method: :get%>
   </p>
 </div>
+
+

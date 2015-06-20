@@ -1,0 +1,36 @@
+
+<div class="form_block">
+<%= form_for @post do |f|%>
+
+  <%if @post.errors.any?%>
+    <div class="error_prevantion">
+      <h4>
+        <%= pluralize(@post.errors.count,"error")%> 
+        prevent you to save!
+      </h4>
+      <ul>
+        <%@post.errors.full_messages.each do |error|%>
+          <li>
+            <%=error%>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+  <%end%>
+    <p>
+      <%= f.label :title%>
+      <%= f.text_field :title%>
+    </p>
+    <p>
+      <%= f.label :post%>
+      <%= f.text_area :post%>
+    </p>
+    <p>
+      <%=f.label :auther_id%>
+      <%=f.text_field :auther_id%>
+    </p>
+    <p>
+      <%= f.submit%>
+    </p>
+<%end%>
+</div>
